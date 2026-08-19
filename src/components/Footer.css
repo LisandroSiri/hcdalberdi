@@ -1,0 +1,31 @@
+/* Footer Styles */
+.main-footer {
+  background-color: var(--bg-card);
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  margin-top: auto; /* Pushes footer to the bottom of the page */
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.25rem;
+}
+
+.main-footer p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.main-footer .footer-meta {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
