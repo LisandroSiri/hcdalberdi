@@ -93,7 +93,7 @@ export const concejalesList = [
         role: "Concejal",
         block: "Justicia y Kompromiso",
         email: "sergiomuray@hcdalberdi.com.ar",
-        image: sergio-muray,
+        image: sergiomuray,
         socials: { facebook: "#", instagram: "https://www.instagram.com/sergio.muray.2025" }
     },
     {
