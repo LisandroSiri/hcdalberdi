@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, Send, FileText, Landmark, Clock, ShieldAlert } from 'lucide-react';
 import entrada from '../components/entrada.jsx';
-import SEO from '../components/SEO.jsx';
+import SEO from '../components/Seo.jsx';
 import './Tramites.css';
 
 const Tramites = () => {
