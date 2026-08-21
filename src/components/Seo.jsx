@@ -9,7 +9,8 @@ const SEO = ({
     type = 'website',
     publishedTime,
     modifiedTime,
-    author
+    author,
+    noIndex = false
 }) => {
     const siteTitle = 'Honorable Concejo Deliberante de Alberdi';
     const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle;
@@ -22,6 +23,9 @@ const SEO = ({
             <title>{fullTitle}</title>
             <meta name="description" content={metaDescription} />
             <meta name="keywords" content={keywords} />
+
+            {/* No indexar si es página de error */}
+            {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
             {/* Open Graph */}
             <meta property="og:title" content={fullTitle} />

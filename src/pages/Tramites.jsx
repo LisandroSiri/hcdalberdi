@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, Send, FileText, Landmark, Clock, ShieldAlert } from 'lucide-react';
 import entrada from '../components/entrada.jsx';
+import SEO from '../components/SEO.jsx';
 import './Tramites.css';
 
 const Tramites = () => {
@@ -9,22 +10,24 @@ const Tramites = () => {
     fullName: '',
     email: '',
     phone: '',
-    category: 'Urbanismo y Obras Públicas',
+    category: 'Presupuesto y Hacienda',
     title: '',
     description: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [trackingCode, setTrackingCode] = useState('');
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
 
   const categories = [
-    'Urbanismo y Obras Públicas',
-    'Cultura, Educación y Deportes',
-    'Hacienda y Presupuesto',
-    'Salud, Ecología y Medio Ambiente',
-    'Seguridad Ciudadana y Tránsito',
-    'Otros Asuntos Legales'
-  ];
+      "Legislación y Peticiones",
+      "Presupuesto y Hacienda",
+      "Obras Públicas y Transporte",
+      "Educación y Cultura, Turismo y Deportes, Salud y Conservación Ambiental",
+      "Relaciones Laborales, Política Ocupacional, Seguridad e Higiene en el Trabajo",
+      "Preservación del Patrimonio de la Ciudad",
+      "Políticas de Género, Mujeres y Diversidad",
+      "Otros"
+    ];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -40,31 +43,33 @@ const handleSubmit = async (e) => {
     return;
   }
 
+  if (!acceptedTerms) {
+    alert("Debe aceptar los términos y condiciones para enviar el formulario.");
+    return;
+  }
+
   setIsSubmitting(true);
 
   try {
     // ✅ Reemplazá esta URL con la que copiaste en el Paso 3
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyX3JoQjnHbnQWHUb1h7e5MMZSgDFWFymf1Pp2-fpTgm7Rs24IXV_Q2iGjgjVKW0WqX/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxuUPZcwnlJXTdx4f7hw4Q07UnF6YSZerUvtm__GsuBEeTN-oiziVUtO0o_MCXoe657tw/exec";
     
     const response = await fetch(SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors', // Importante para Google Apps Script
+      method: 'POST', 
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain;charset=utf-8',
       },
       body: JSON.stringify(formData)
     });
 
-    // Como usamos 'no-cors', no podemos leer la respuesta directamente.
-    // Pero el script igual guarda los datos en el Sheet.
-    
-    setIsSubmitting(false);
-    setIsSuccess(true);
-    
-    // Generar código de seguimiento (igual que antes)
-    const code = "EXP-" + Math.floor(100000 + Math.random() * 900000) + "/26";
-    setTrackingCode(code);
-
+    const result = await response.json();
+    if(result.success) {
+      setIsSubmitting(false);
+      setIsSuccess(true);
+    }else {
+      alert(result.error || "Hubo un error al enviar el formulario. Por favor intentá de nuevo.");
+      setIsSubmitting(false);
+    }
   } catch (error) {
     console.error("Error al enviar:", error);
     alert("Hubo un error al enviar el formulario. Por favor intentá de nuevo.");
@@ -77,15 +82,24 @@ const handleSubmit = async (e) => {
       fullName: '',
       email: '',
       phone: '',
-      category: 'Urbanismo y Obras Públicas',
+      category: 'Legislación y Peticiones',
       title: '',
       description: ''
     });
+    setAcceptedTerms(false);
     setIsSuccess(false);
-    setTrackingCode('');
   };
 
   return (
+    <>
+    <SEO 
+      title="Mesa de Entradas Digital"
+      description="Presenta tus propuestas de proyectos legislativos, reclamos formales o iniciativas particulares ante el Concejo Deliberante de la Ciudad."
+      url="https://hcdalberdi.com.ar/mesa-de-entrada-digital"   
+      type="website"
+    />
+
+
     <motion.div 
       className="tramites-page container section"
       initial={{ opacity: 0 }}
@@ -144,7 +158,8 @@ const handleSubmit = async (e) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
-                <h3 className="serif-title" style={{ fontSize: '1.4rem', marginBottom: '1.5rem' }}>Formulario de Iniciativa Popular</h3>
+                <h3 className="serif-title" style={{ fontSize: '1.4rem' }}>Formulario de Iniciativa Popular</h3>
+                <p style={{marginBottom: '1.2rem'}}>Las casillas marcadas con * son obligatorias.</p>
                 
                 <div className="grid grid-2">
                   <div className="form-group">
@@ -153,7 +168,7 @@ const handleSubmit = async (e) => {
                       type="text"
                       name="fullName"
                       className="form-input"
-                      placeholder="Ej. Juan Pérez"
+                      placeholder=""
                       value={formData.fullName}
                       onChange={handleInputChange}
                       required
@@ -165,7 +180,7 @@ const handleSubmit = async (e) => {
                       type="email"
                       name="email"
                       className="form-input"
-                      placeholder="Ej. jperez@email.com"
+                      placeholder=""
                       value={formData.email}
                       onChange={handleInputChange}
                       required
@@ -180,7 +195,7 @@ const handleSubmit = async (e) => {
                       type="tel"
                       name="phone"
                       className="form-input"
-                      placeholder="Ej. +54 381 555-5555"
+                      placeholder="Ej. +54 3865 555-5555"
                       value={formData.phone}
                       onChange={handleInputChange}
                     />
@@ -207,7 +222,7 @@ const handleSubmit = async (e) => {
                     type="text"
                     name="title"
                     className="form-input"
-                    placeholder="Ej. Proyecto de Arbolado de Veredas en Barrio Norte"
+                    placeholder="Ej: Proyecto de Arbolado de Veredas en Barrio ..."
                     value={formData.title}
                     onChange={handleInputChange}
                     required
@@ -231,10 +246,25 @@ const handleSubmit = async (e) => {
                 {/* File Uploader Component */}
                 
 
+                {/* Términos y Condiciones */}
+                <div className="form-group" style={{ marginBottom: '1.2rem' }}>
+                  <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', cursor: 'pointer' }}>
+                    <input
+                      type="checkbox"
+                      checked={acceptedTerms}
+                      onChange={(e) => setAcceptedTerms(e.target.checked)}
+                      style={{ marginTop: '0.2rem', width: '1.1rem', height: '1.1rem', flexShrink: 0, cursor: 'pointer', accentColor: 'var(--primary)' }}
+                    />
+                    <span style={{ fontSize: '0.9rem', lineHeight: '1.5', color: 'var(--text-muted, #666)' }}>
+                      He leído y acepto que los datos ingresados en este formulario serán utilizados exclusivamente para el registro y seguimiento de mi presentación ante el Honorable Concejo Deliberante de Alberdi. La información proporcionada es veraz y de mi responsabilidad. *
+                    </span>
+                  </label>
+                </div>
+
                 <button 
                   type="submit" 
                   className="btn btn-primary"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !acceptedTerms}
                   style={{ width: '100%', gap: '0.8rem', height: '3.2rem', fontSize: '1rem' }}
                 >
                   {isSubmitting ? (
@@ -265,30 +295,10 @@ const handleSubmit = async (e) => {
                 <p style={{ marginBottom: '1.5rem' }}>
                   Tu iniciativa popular ha sido radicada con éxito en la Mesa de Entradas Digital del Honorable Concejo Deliberante.
                 </p>
-
-                <div className="tracking-code-box card" style={{ backgroundColor: 'var(--primary-light)', padding: '1.5rem', marginBottom: '2rem', border: '1px dashed var(--primary)' }}>
-                  <span style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--primary)', fontWeight: '600' }}>
-                    Código de Expediente de Seguimiento
-                  </span>
-                  <h3 style={{ fontSize: '2rem', margin: '0.5rem 0', fontFamily: 'monospace', color: 'var(--text-main)' }}>
-                    {trackingCode}
-                  </h3>
-                  <p style={{ fontSize: '0.8rem', margin: 0 }}>
-                    Guarda este código para consultar el avance de las comisiones parlamentarias.
-                  </p>
-                </div>
-
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>
-                  Hemos enviado una confirmación formal a tu casilla de correo electrónico <strong>{formData.email}</strong> con los detalles del proyecto y copia de los archivos recibidos.
-                </p>
-
                 <div style={{ display: 'flex', gap: '1rem' }}>
                   <button className="btn btn-secondary" style={{ flex: 1 }} onClick={resetForm}>
                     Presentar otro Proyecto
                   </button>
-                  <a href="/normativas" className="btn btn-primary" style={{ flex: 1 }}>
-                    Ver Digesto de Normativas
-                  </a>
                 </div>
               </motion.div>
             )}
@@ -296,6 +306,7 @@ const handleSubmit = async (e) => {
         </motion.div>
       </div>
     </motion.div>
+    </>
   );
 };
 

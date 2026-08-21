@@ -73,7 +73,7 @@ const Concejales = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 style={{ cursor: 'pointer' }}
-                onClick={() => navigate(`/${slugify(c.name)}`)}
+                onClick={() => navigate(`/concejales/${slugify(c.name)}`)}
               >
                 <div className="concejal-header">
                   <img src={c.image} alt={c.name} className="concejal-photo" />
@@ -108,7 +108,7 @@ const Concejales = () => {
                       style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', gap: '0.35rem' }}
                       onClick={(e) => {
                         e.stopPropagation();
-                        navigate(`/${slugify(c.name)}`);
+                        navigate(`/concejales/${slugify(c.name)}`);
                       }}
                     >
                       <User size={13} />

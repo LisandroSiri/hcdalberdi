@@ -1,4 +1,5 @@
 import { form } from "framer-motion/client";
+import sergiomuray from "./assets/concejales/concejal5.jpg";
 
 export const slugify = (text) => {
     return text
@@ -17,10 +18,11 @@ export const slugify = (text) => {
 export const concejalesList = [
     {
         id: 1,
-        name: "José Romano",
+        name: "Marcelo Ogas",
+        fullname: "Marcelo Ogas",
         role: "Presidente",
         block: "Tucumán Primero",
-        email: "joseromano@hcdalberdi.com.ar",
+        email: "marceloogas@hcdalberdi.com.ar",
         image: "src/assets/concejales/presidente.png",
         socials: { facebook: "#", instagram: "https://www.instagram.com/" }
     },
@@ -47,6 +49,7 @@ export const concejalesList = [
     {
         id: 4,
         name: "Martina Siri",
+        fullname: "Martina Siri",
         role: "Concejal",
         block: "Cambia Alberdi",
         email: "martinasiri@hcdalberdi.com.ar",
@@ -56,6 +59,7 @@ export const concejalesList = [
     {
         id: 5,
         name: "Ana Campos",
+        fullname: "Ana Campos",
         role: "Concejal",
         block: "Tucumán Primero",
         email: "anacampos@hcdalberdi.com.ar",
@@ -65,6 +69,7 @@ export const concejalesList = [
     {
         id: 6,
         name: "José Calderón",
+        fullname: "José Calderón",
         role: "Concejal",
         block: "Alberdi Primero",
         email: "josecalderon@hcdalberdi.com.ar",
@@ -74,6 +79,7 @@ export const concejalesList = [
     {
         id: 7,
         name: "Ramiro Aguilera",
+        fullname: "Ramiro Aguilera",
         role: "Concejal",
         block: "Cambia Alberdi",
         email: "ramiroaguilera@hcdalberdi.com.ar",
@@ -83,15 +89,17 @@ export const concejalesList = [
     {
         id: 8,
         name: "Sergio Muray",
+        fullname: "Sergio Muray",
         role: "Concejal",
         block: "Justicia y Kompromiso",
         email: "sergiomuray@hcdalberdi.com.ar",
-        image: "src/assets/concejales/concejal5.jpg",
+        image: sergio-muray,
         socials: { facebook: "#", instagram: "https://www.instagram.com/sergio.muray.2025" }
     },
     {
         id: 9,
         name: "Nanci Cuenca",
+        fullname: "Nanci Cuenca",
         role: "Concejal",
         block: "Trabajando por Alberdi",
         email: "nancycuenca@hcdalberdi.com.ar",
@@ -100,10 +108,11 @@ export const concejalesList = [
     },
     {
         id: 10,
-        name: "Marcelo Ogas",
+        name: "José Romano",
+        fullname: "José Romano",
         role: "Concejal",
         block: "Tucumán Primero",
-        email: "marceloogas@hcdalberdi.com.ar",
+        email: "joseromano@hcdalberdi.com.ar",
         image: "src/assets/concejales/default.jpg",
         socials: { facebook: "#", instagram: "https://www.instagram.com/" }
     }

@@ -21,7 +21,7 @@ const Profiles = () => {
       <div className="profile-page container section" style={{ textAlign: 'center', padding: '4rem 1.5rem' }}>
         <h2 className="serif-title">Perfil no encontrado</h2>
         <p style={{ marginTop: '1rem', marginBottom: '2rem' }}>El concejal que buscas no existe o la URL es incorrecta.</p>
-        <button onClick={() => navigate('/')} className="btn-back" style={{ margin: 0 }}>
+        <button onClick={() => navigate('/concejales')} className="btn-back" style={{ margin: 0 }}>
           <ArrowLeft size={18} />
           <span>Volver al inicio</span>
         </button>
@@ -45,12 +45,13 @@ const Profiles = () => {
       />
       <motion.div
         className="profile-page container section"
+        style={{ padding: '0.8rem' }}
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -15 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
       >
-        <button onClick={() => navigate('/')} className="btn-back">
+        <button onClick={() => navigate('/concejales')} className="btn-back">
           <ArrowLeft size={18} />
           <span>Volver a Concejales</span>
         </button>
