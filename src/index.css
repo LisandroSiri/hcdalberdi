@@ -10,7 +10,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  
   -webkit-text-size-adjust: 100%;
 }
 
@@ -39,18 +39,9 @@ body {
   height: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: var(--bg-main);
-}
 
-::-webkit-scrollbar-thumb {
-  background: var(--border);
-  border-radius: var(--radius-full);
-}
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--text-muted);
-}
+
 
 /* Typography Rules */
 h1,
@@ -134,6 +125,18 @@ button {
 .btn-primary {
   background-color: var(--primary);
   color: white;
+}
+
+.btn-blur {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+  color: white;
+}
+
+.btn-blur:hover {
+  background: rgba(255, 255, 255, 0.35);
+   transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary:hover {
@@ -272,4 +275,8 @@ button {
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+::selection {
+  background-color: color-mix(in srgb, var(--primary) 85%, transparent);
+  color:white;
 }

@@ -16,16 +16,24 @@ import {
   Eye,
   ArrowRight,
   Building2,
+  Dot,
 } from "lucide-react";
 import SEO from "../components/Seo.jsx";
-import hero1 from "../assets/consejo-hero.jpg";
-import hero2 from "../assets/hero3.webp";
-import hero3 from "../assets/hero3.jpg";
+import hero1 from "../assets/hero1.webp";
+import hero2 from "../assets/hero.webp";
+import hero3 from "../assets/hero2.webp";
 import logoConsejo from "../assets/logo-consejo.webp";
 import "./Home.css";
 
 /* Hero Carousel Data */
-const heroSlides = [
+const heroSlides = [ 
+   {
+    id: 2,
+    image: hero2,
+    title: "Alberdi crece\ncon vos",
+    subtitle: "Participá activamente en la vida democrática de nuestra ciudad.",
+    cta: { label: "Cómo participar", to: "/mesa-de-entrada-digital" },
+  },
   {
     id: 1,
     image: hero1,
@@ -33,13 +41,7 @@ const heroSlides = [
     subtitle: "Honorable Concejo Deliberante de Juan Bautista Alberdi, Tucumán",
     cta: { label: "Conocé a los Concejales", to: "/concejales" },
   },
-  {
-    id: 2,
-    image: hero2,
-    title: "Alberdi crece\ncon vos",
-    subtitle: "Participá activamente en la vida democrática de nuestra ciudad.",
-    cta: { label: "Cómo participar", to: "/mesa-de-entrada-digital" },
-  },
+
   {
     id: 3,
     image: hero3,
@@ -105,9 +107,9 @@ const Home = () => {
   }, [next]);
 
   useEffect(() => {
-    if (autoPlay) startAutoPlay();
-    return () => clearInterval(intervalRef.current);
-  }, [autoPlay, startAutoPlay]);
+   if (autoPlay) startAutoPlay();
+      return () => clearInterval(intervalRef.current);
+ }, [autoPlay, startAutoPlay]);
 
   const handleNav = (cb) => {
     setAutoPlay(false);
@@ -195,7 +197,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.65, duration: 0.5 }}
               >
-                <Link to={heroSlides[current].cta.to} className="btn btn-accent hero-cta">
+                <Link to={heroSlides[current].cta.to} className="btn btn-blur hero-cta">
                   {heroSlides[current].cta.label} <ArrowRight size={18} />
                 </Link>
               </motion.div>
@@ -473,7 +475,7 @@ const Home = () => {
                 <p className="transparency-lead">El Concejo trabaja con responsabilidad y transparencia para que cada vecino tenga acceso a información pública de manera <strong>clara, abierta y simple</strong>.</p>
                 <ul className="transparency-list">
                   {["Publicación de normas y actos administrativos.", "Acceso a información legislativa.", "Rendición de cuentas y control institucional.", "Gestión abierta y responsable.", "Acceso público a la actividad del Concejo.", "Compromiso con la ética pública."].map((item, i) => (
-                    <li key={i}><Eye size={16} /><span>{item}</span></li>
+                    <li key={i}><Dot size={16} /><span>{item}</span></li>
                   ))}
                 </ul>
               </div>

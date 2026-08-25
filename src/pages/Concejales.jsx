@@ -7,16 +7,15 @@ import './Concejales.css';
 import SEO from '../components/Seo.jsx';
 import { slugify, concejalesList } from '../data';
 
-
 const Concejales = () => {
   const [selectedBlock, setSelectedBlock] = useState('Todos');
   const navigate = useNavigate();
 
   const blocks = ['Todos', 'Cambia Alberdi', 'Tucumán Primero', 'Alberdi Primero', 'Justicia y Kompromiso', 'Construyendo Futuro', 'Trabajando por Alberdi'];
 
-  const filteredConcejales = selectedBlock === 'Todos'
-    ? concejalesList
-    : concejalesList.filter(c => c.block === selectedBlock);
+const filteredConcejales = selectedBlock === 'Todos'
+  ? concejalesList.filter(c => c.role === 'Concejal')
+  : concejalesList.filter(c => c.block === selectedBlock && c.role === 'Concejal');
 
 
   return (
@@ -56,7 +55,7 @@ const Concejales = () => {
             ))}
           </div>
         </div>
-
+          
         {/* Grid of Councillors */}
         <div
           className="grid grid-3"
@@ -78,7 +77,7 @@ const Concejales = () => {
                 <div className="concejal-header">
                   <img src={c.image} alt={c.name} className="concejal-photo" />
                   <div className="concejal-meta">
-                    <span className="concejal-badge">{c.role}</span>
+                    <span className="concejal-badge">{c.subrole}</span>
                     <span className="concejal-block-badge">{c.block}</span>
                   </div>
                 </div>
@@ -102,7 +101,7 @@ const Concejales = () => {
                         {c.socials.instagram && <a href={c.socials.instagram} className="social-link" style={{ color: 'var(--text-muted)' }}><Instagram size={18} /></a>}
                       </div>
                     )}
-
+        
                     <button
                       className="btn btn-primary"
                       style={{ padding: '0.4rem 0.8rem', fontSize: '0.8rem', gap: '0.35rem' }}
@@ -120,9 +119,49 @@ const Concejales = () => {
             ))}
           </AnimatePresence>
         </div>
+        {/* Secretaries Section */}
+        <div className="section-title">
+          <h2 className="serif-title" style={{ marginTop: '1.5rem' }}>Conocé a los Secretarios</h2>
+        </div>
+        <div
+          className="grid grid-3"
+          style={{ marginTop: '2rem' }}
+        >
+          <AnimatePresence >
+            {concejalesList.filter(c => c.role === 'Secretario').map((c) => (
+              <motion.div
+                key={c.id}
+                className="card concejal-card"
+                layout="position"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+                style={{ cursor: 'pointer' }}
+                onClick={() => navigate(`/concejales/${slugify(c.name)}`)}
+              >
+                <div className="concejal-header">
+                  <img src={c.image} alt={c.name} className="concejal-photo" />
+                  <div className="concejal-meta">
+                    <span className="concejal-badge">{c.subrole}</span>
+                  </div>
+                </div>
+
+                <div className="concejal-body">
+                  <h3 className="serif-title">{c.name}</h3>
+                  
+                  <div className="concejal-contact">
+                    
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
       </motion.div>
     </>
   );
 };
+
 
 export default Concejales;

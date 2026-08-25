@@ -13,8 +13,10 @@ const Profiles = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [showFullBio, setShowFullBio] = useState(false);
   const concejal = concejalesList.find((c) => slugify(c.name) === slug);
   
+  const isSecretario = concejal.role === "Secretario"
 
   if (!concejal) {
     return (
@@ -103,11 +105,14 @@ const Profiles = () => {
           {/* Right Column: Name, Role, Grid of details (Bio, Commissions, Block), and Projects */}
           <div className="profile-main-content">
             <h1 className="profile-name serif-title">{concejal.fullname}</h1>
-            <p className="profile-role-description">{concejal.role} del Honorable Concejo Deliberante</p>
+            <p className="profile-role-description">{concejal.subrole} del Honorable Concejo Deliberante</p>
+            {!isSecretario && (
             <p className="profile-block-description">Bloque: {concejal.block}</p>
+            )}
             {/* Grid Layout conforming to the user's requested grid format */}
            
             <div className="profile-info-grid">
+              {!isSecretario && (
               <section className="profile-section commissions-section">
                 <h3 className="section-subtitle">Comisiones que Integra</h3>
                 {detail.commissions && detail.commissions.length > 0 ? (
@@ -123,7 +128,7 @@ const Profiles = () => {
                   <p className="no-projects-text">No registra comisiones integradas.</p>
                 )}
               </section>
-
+              )}
               <section className="profile-section block-section">
                 <h3 className="section-subtitle">Formación Académica</h3>
                 <div className="block-details">
@@ -132,10 +137,23 @@ const Profiles = () => {
               </section>
               <section className="profile-section bio-section">
                 <h3 className="section-subtitle">Biografía</h3>
-                <p className="profile-bio-text" style={{ whiteSpace: 'pre-line' }} >{detail.bio}</p>
+                <p className="profile-bio-text" style={{ whiteSpace: 'pre-line' }}>
+                  {detail.bio && detail.bio.length > 1200 && !showFullBio
+                    ? `${detail.bio.slice(0, 1200)}...`
+                    : detail.bio}
+                </p>
+                {detail.bio && detail.bio.length > 250 && (
+                  <button
+                    onClick={() => setShowFullBio(!showFullBio)}
+                    className="btn-back"
+                    style={{ marginTop: '0.8rem', cursor: 'pointer' }}
+                  >
+                    {showFullBio ? 'Ver menos' : 'Ver más'}
+                  </button>
+                )}
               </section>
             </div>
-
+           {!isSecretario && ( 
     <section className="profile-section projects-section">
       <h3 className="section-subtitle">Proyectos Presentados{detail.projects ? ` (${detail.projects.length})` : ''} </h3>
       {detail.projects && detail.projects.length > 0 ? (
@@ -170,6 +188,7 @@ const Profiles = () => {
         <p className="no-projects-text">No se registran proyectos presentados recientemente.</p>
       )}
     </section>
+    )}
           </div>
         </div>
       </motion.div>
