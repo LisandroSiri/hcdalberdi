@@ -298,6 +298,32 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* Formation Styles */
+.formation-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.formation-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.9rem;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+
+.formation-tag svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
 /* Projects Styles */
 .projects-list {
   display: flex;

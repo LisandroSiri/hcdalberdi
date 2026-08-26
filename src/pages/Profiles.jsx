@@ -37,6 +37,12 @@ const Profiles = () => {
     projects: []
   };
 
+  const formationList = Array.isArray(detail.formation)
+    ? detail.formation
+    : typeof detail.formation === 'string' && detail.formation.trim() !== ''
+    ? (detail.formation.includes(',') ? detail.formation.split(',').map(s => s.trim()).filter(Boolean) : [detail.formation.trim()])
+    : [];
+
   return (
     <>
       <SEO
@@ -131,9 +137,18 @@ const Profiles = () => {
               )}
               <section className="profile-section block-section">
                 <h3 className="section-subtitle">Formación Académica</h3>
-                <div className="block-details">
-                  <span className="block-name-large">{detail.formation}</span>
-                </div>
+                {formationList.length > 0 ? (
+                  <div className="formation-grid">
+                    {formationList.map((item, index) => (
+                      <div key={index} className="formation-tag">
+                       
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="no-projects-text">No registra formación académica.</p>
+                )}
               </section>
               <section className="profile-section bio-section">
                 <h3 className="section-subtitle">Biografía</h3>

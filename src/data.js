@@ -31,7 +31,7 @@ export const slugify = (text) => {
 // Exported so Profiles page can import it
 export const concejalesList = [
     {
-        id: 1,
+        id: 10,
         name: "Marcelo Ogas",
         fullname: "Marcelo Ogas",
         role: "Concejal",
@@ -43,8 +43,8 @@ export const concejalesList = [
     },
     {
         id: 2,
-        name: "Adolfo Diaz Chavero",
-        fullname: "Hector Adolfo Diaz Chavero",
+        name: "Adolfo Díaz Chavero",
+        fullname: "Héctor Adolfo Díaz Chavero",
         role: "Concejal",
         subrole: "Vicepresidente I",
         block: "Cambia Alberdi",
@@ -88,7 +88,7 @@ export const concejalesList = [
     {
         id: 5,
         name: "Ana Campos",
-        fullname: "Ana Campos",
+        fullname: "Ana Maria Campos",
         role: "Concejal",
         subrole: "Concejal",
         block: "Tucumán Primero",
@@ -119,9 +119,9 @@ export const concejalesList = [
         socials: { facebook: "https://www.facebook.com/profile.php?id=61579299590850", instagram: "https://www.instagram.com/sergio.muray.2025" }
     }, 
     {
-        id: 10,
+        id: 1,
         name: "José Romano",
-        fullname: "José Romano",
+        fullname: "José Diógenes Romano",
         role: "Concejal",
         subrole: "Concejal",
         block: "Tucumán Primero",
@@ -163,7 +163,19 @@ export const concejalesList = [
 
 export const profilesData = {
   1: { // José Romano
-    bio: "",
+    bio: `José Diógenes Romano nació el 20 de abril de 1956 y es oriundo de la ciudad de Juan Bautista Alberdi, donde nació, creció y reside hasta la actualidad. Es hijo de José Diógenes Romano y Elsa Aída Samayoa, y es padre de dos hijos.
+En el ámbito profesional, cuenta con una formación vinculada a distintas áreas técnicas. Es Perito Mercantil, Técnico en Electrónica y Técnico en Telecomunicaciones. Asimismo, se desempeñó como Profesor Técnico dependiente del Consejo Nacional de Educación Técnica (CONET), con asiento en la ciudad de Concepción, desarrollando una trayectoria vinculada a la educación y a la formación técnica.
+Su incursión en la actividad política se produjo en el año 1983, siguiendo una tradición familiar estrechamente vinculada al movimiento peronista. En continuidad con esa trayectoria, en el año 1984 se afilió al Partido Justicialista, espacio político en el que desarrolló gran parte de su vida y militancia institucional.
+En el año 1987 presentó su primera candidatura a Concejal de la ciudad de Juan Bautista Alberdi, resultando electo y accediendo a una banca en el Honorable Concejo Deliberante, función que desempeñó hasta el año 1990.
+En ese mismo año, inició una etapa de responsabilidad dentro de la administración municipal, desempeñándose como Director de Inspección General y Servicios Públicos de la Municipalidad de Juan Bautista Alberdi, funciones que ejerció hasta el año 1994.
+Su trayectoria política tuvo una nueva etapa a partir del año 2003, cuando presentó su segunda candidatura a Concejal y resultó electo para el período 2003–2007. Posteriormente, renovó su representación mediante una nueva candidatura y fue nuevamente electo para el período 2007–2011, consolidando así una extensa trayectoria dentro del ámbito legislativo municipal.
+A lo largo de su carrera política también desempeñó funciones en el ámbito provincial, ocupando el cargo de Coordinador de Grandes Comunas, dependiente del Ministerio del Interior del Superior Gobierno de la Provincia de Tucumán, participando en tareas de articulación y gestión vinculadas al ámbito territorial.
+Posteriormente, luego del proceso de reorganización institucional del Municipio desarrollado durante el año 2025, retomó su participación en el ámbito legislativo municipal, resultando electo en las elecciones celebradas durante ese año para integrar el Honorable Concejo Deliberante durante el período 2025–2027. Actualmente se desempeña como Presidente del Bloque Tucumán Primero en el Honorable Concejo Deliberante de Juan Bautista Alberdi.
+A lo largo de su trayectoria legislativa, y en las distintas oportunidades en las que accedió a una banca mediante el voto popular, presentó cientos de proyectos orientados a abordar distintas necesidades de la comunidad. Algunas de estas iniciativas fueron promulgadas y concretadas, mientras que otras continúan su tratamiento en las respectivas comisiones del cuerpo legislativo.
+Su trayectoria se encuentra estrechamente vinculada con el compromiso por la justicia social, la cultura, la juventud, el deporte y el crecimiento y desarrollo de la ciudad de Juan Bautista Alberdi, ámbitos que considera fundamentales para la construcción de una comunidad con mayores oportunidades y una mejor calidad de vida para sus vecinos.
+Actualmente, José Diógenes Romano continúa desarrollando su labor desde el Honorable Concejo Deliberante, reafirmando su compromiso con la representación de los vecinos y con el desarrollo institucional, social y comunitario de la ciudad de Juan Bautista Alberdi.
+`,
+formation: ["Perito Mercantil","Técnico en Electrónica","Técnico en Telecomunicación","Profesor Técnico dependiente del CONET"],
        commissions: [
       "Presupuesto y Hacienda",
       "Obras Públicas y Transporte",
@@ -254,7 +266,15 @@ formation:"Marketing digital y publicidad.",
     ]
   },
   5: { // Ana Campos
-    bio: "",
+    bio: `Ana María Campos desarrolla desde el año 2003 una sostenida trayectoria de participación social y comunitaria, vinculada estrechamente con el acompañamiento a vecinos, familias e instituciones de su comunidad.
+Desde sus comienzos, trabajó junto a un grupo de vecinos de su localidad, impulsada por el compromiso de acompañar, gestionar y buscar soluciones a las distintas necesidades de la comunidad. A lo largo de estos años, desarrolló principalmente una labor de carácter social y comunitario, realizando gestiones destinadas a brindar respuestas y acompañamiento a vecinos y familias ante diferentes necesidades.
+Como parte de este recorrido, mantuvo una permanente vocación de capacitación y formación, procurando incorporar nuevas herramientas y conocimientos que le permitieran fortalecer y mejorar su tarea de acompañamiento comunitario.
+Su trabajo se caracterizó por un fuerte vínculo con el territorio, basado en la escucha activa de los vecinos, el contacto directo con la comunidad y el trabajo conjunto para abordar las distintas realidades y necesidades de la zona. Dentro de esta tarea, tuvo especial consideración por el acompañamiento a niños, jóvenes y estudiantes, colaborando con instituciones educativas y participando en gestiones orientadas a atender diferentes necesidades de la comunidad.
+Su trayectoria social y comunitaria encontró posteriormente una continuidad en el ámbito político y legislativo municipal. En este marco, regresó al ámbito legislativo municipal para el período 2023–2027 y, tras el proceso de reorganización institucional del Municipio desarrollado durante el año 2025, fue nuevamente electa para el período 2025–2027.
+Actualmente se desempeña como Concejal del Honorable Concejo Deliberante de la ciudad de Juan Bautista Alberdi, desde donde continúa desarrollando su labor con el mismo compromiso que ha caracterizado su trayectoria, llevando al ámbito legislativo las necesidades, inquietudes y propuestas de los vecinos, tanto de la ciudad como de las zonas rurales.
+Su recorrido representa una trayectoria construida desde el trabajo territorial, la participación comunitaria y el compromiso social, consolidando una vocación de servicio orientada al acompañamiento de las familias y al fortalecimiento de los vínculos entre la comunidad y sus instituciones.
+`,
+formation:"Perito Mercantil",
      commissions: [
       "Presupuesto y Hacienda",
       "Obras Públicas y Transporte",

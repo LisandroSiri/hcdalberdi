@@ -1,0 +1,5 @@
+# robots.txt for Honorable Concejo Deliberante de Alberdi
+User-agent: *
+Allow: /
+
+Sitemap: https://hcdalberdi.com.ar/sitemap.xml
