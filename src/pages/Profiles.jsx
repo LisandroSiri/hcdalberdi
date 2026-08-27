@@ -83,12 +83,6 @@ const Profiles = () => {
                     <a href={`mailto:${concejal.email}`}>{concejal.email}</a>
                   </div>
                 )}
-                {concejal.phone && (
-                  <div className="contact-info-item">
-                    <Phone size={16} />
-                    <a href={`tel:${concejal.phone}`}>{concejal.phone}</a>
-                  </div>
-                )}
               </div>
 
               {concejal.socials && (

@@ -85,14 +85,6 @@ const filteredConcejales = selectedBlock === 'Todos'
                 <div className="concejal-body">
                   <h3 className="serif-title">{c.name}</h3>
 
-                  <div className="concejal-contact">
-                    <div className="contact-item">
-                      <Mail size={16} />
-                      <span onClick={(e) => e.stopPropagation()}>
-                        <a href={`mailto:${c.email}`}>{c.email}</a>
-                      </span>
-                    </div>
-                  </div>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
                     {c.socials && (

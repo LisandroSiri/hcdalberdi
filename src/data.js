@@ -1,4 +1,4 @@
-import { form } from "framer-motion/client";
+import { form, title } from "framer-motion/client";
 import sergiomuray from "./assets/concejales/sergio-muray.webp";
 import marceloogas from "./assets/concejales/marcelo-ogas.webp";
 import adolfochavero from "./assets/concejales/aldolfo-chavero.webp";
@@ -9,6 +9,8 @@ import anacampos from "./assets/concejales/ana-campos.webp";
 import nancicuenca from "./assets/concejales/nanci-cuenca.webp";
 import joseromano from "./assets/concejales/jose-romano.webp";
 import cintiamelikmatar from "./assets/concejales/cintia-meli.webp";
+import gallego from "./assets/concejales/gallego.webp"
+import mercado from "./assets/concejales/mercado.webp"
 
 
 
@@ -66,7 +68,7 @@ export const concejalesList = [
     {
         id: 7,
         name: "Ramiro Aguilera",
-        fullname: "Ramiro Aguilera",
+        fullname: "Ramiro Maximiliano Aguilera",
         role: "Concejal",
         subrole: "Concejal",
         block: "Cambia Alberdi",
@@ -146,7 +148,7 @@ export const concejalesList = [
         fullname: "Miguel Gallego",
         role: "Secretario",
         subrole: "Secretario Parlamentario",
-        image: "src/assets/concejales/default.jpg",
+        image: gallego,
         socials: { facebook: "#", instagram: "https://www.instagram.com/" }
     },
     {
@@ -155,7 +157,7 @@ export const concejalesList = [
         fullname: "Graciela Mercado",
         role: "Secretario",
         subrole: "Prosecretario Parlamentario",
-        image: "src/assets/concejales/default.jpg",
+        image: mercado,
         socials: { facebook: "#", instagram: "https://www.instagram.com/" }
     }
 ];
@@ -215,7 +217,26 @@ Su trayectoria reúne experiencias en los ámbitos estudiantil, político, legis
       "Preservación del Patrimonio de la Ciudad",
       "Políticas de Género, Mujeres y Diversidad"
     ],
-    projects: [
+ projects: [
+      {id:"",title:"Proyecto de ordenanza: Creación del Comité de Emergencia", description:"Propone crear un Comité de Emergencia Municipal coordinado ante crisis climáticas, sanitarias y de seguridad pública.", date:"16/03/2026"},
+      {id:"",title:"Proyecto de ordenanza: Creación del Portal de Ingreso a la Ciudad", description:"Propone diseñar y edificar un Portal de Ingreso identitario en el acceso principal de la ciudad sobre la Ruta Provincial 38.", date:"01/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Plan Integral Pre-Lluvias", description:"Exige al Departamento Ejecutivo realizar de urgencia el mantenimiento preventivo, dragado y desmalezamiento de la red de canales pluviales antes del verano.", date:"17/11/2025"},
+      {id:"",title:"Proyecto de Ordenanza: Régimen de transparencia, fundamentación y protección del personal contratado municipal",description:"La necesidad de garantizar transparencia, razonabilidad y debido proceso administrativo en las decisiones vinculadas a la rescisión de contratos del personal municipal", date:"18/05/2026"},
+      {id:"",title:"Proyecto de resolución: Informe de Ejecución Presupuestaria y Estado Financiero Municipal", description:"Iniciativa para solicitar formalmente las cuentas bancarias, deudas de proveedores e ingresos percibidos de la actual gestión.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Limpieza y adecuación de alcantarillas en Barrio Jardín", description:"Reclama la limpieza urgente del canal pluvial de calle Tacuarí y la ampliación de la capacidad de alcantarillas en el cruce de la Ruta Nacional 38.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Estudios técnicos para red cloacal en Av. Lídoro J. Quinteros y calle Cabildo", description:"Solicita evaluar la factibilidad técnica y buscar financiamiento para construir la red de cloacas en un sector carente de saneamiento básico.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Solicitud de informe administrativo post-intervención", description:"Exige al Ejecutivo un informe detallado del estado financiero, patrimonial, deudas, personal y contratos vigentes heredados del periodo de intervención.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Acciones para planta de tratamiento de líquidos cloacales", description:"Sugerencia para gestionar ante la SAT y la Provincia la localización o expropiación de un terreno apto para instalar una planta de tratamiento de residuos cloacales.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Prórroga de sesiones ordinarias del Honorable Concejo Deliberante", description:"Propone prorrogar por 30 días las sesiones ordinarias del HCD ante la tardía asunción de concejales post-intervención.", date:"4/11/2025"},
+      {id:"",title:"Proyecto de resolución: Infraestructura hidráulica para prevenir anegamientos en Barrio Jardín", description:"Petición urgente para desobstruir el canal a cielo abierto e incrementar el tamaño de alcantarillas en el cruce de la Ruta Nacional 38.", date:"20/04/2026"},
+      {id:"",title:"Proyecto de comunicación: Solicitud de implementación de Boleta Única y reforma política", description:"Insta a la Legislatura provincial a tratar la reforma electoral para eliminar el régimen de acoples y aplicar la Boleta Única.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Exigencia de cumplimiento de la Ordenanza N.º 04/2025", description:"Sanción para intimar al Ejecutivo Municipal a que realice el enripiado, alumbrado y señalización obligatoria del camino rural Los Arroyos", date:"15/12/2025"},
+      {id:"",title:"Proyecto de ordenanza: Creación del Programa de Protección de Derechos Animales", description:"Propone regulaciones para campañas de castración segura con análisis de sangre previos obligatorios e instalación de comederos y bebederos públicos.", date:"15/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Diagnóstico sobre el servicio de agua potable", description:"Requiere una minuta de comunicación para exigir a la SAT un informe del estado operativo, de mantenimiento y de fallas en el suministro local", date:"17/11/2025"},
+      {id:"",title:"Proyecto de ordenanza: Preservación del carácter institucional y neutralidad del Estado", description:"Propone prohibir la rotulación o ploteo de maquinarias, vehículos y edificios públicos con nombres de políticos vigentes, ex intendentes o slogans partidarios.", date:"-"},
+      {id:"",title:"Proyecto de comunicación: Aplicación de la Ordenanza N.º 05/2012 de ruidos molestos", description:"Reclama al Ejecutivo Municipal que haga efectiva la prohibición y los controles sobre motocicletas que circulan con caños de escape libres o modificados.", date:"01/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Pedido de informe sobre obra de caminería en el Complejo Municipal", description:"Minuta que solicita detalles técnicos, plazos y costos de la caminería interna que interfiere con canchas de básquetbol y hockey.", date:"13/06/2026"},
+      {id:"",title:"Proyecto de resolución: Reconocimiento a la estudiante Eowlyn Montenegro", description:"Sanciona felicitaciones y pide evaluar colaboración presupuestaria para la estudiante local seleccionada por Space Kidz India para el diseño del satélite 'ShakthiSAT'.", date:"-"},  
       
     ]
   },
@@ -263,6 +284,26 @@ formation:"Marketing digital y publicidad.",
       "Políticas de Género, Mujeres y Diversidad"
     ],
     projects: [
+      {id:"",title:"Proyecto de ordenanza: Creación del Comité de Emergencia", description:"Propone crear un Comité de Emergencia Municipal coordinado ante crisis climáticas, sanitarias y de seguridad pública.", date:"16/03/2026"},
+      {id:"",title:"Proyecto de ordenanza: Creación del Portal de Ingreso a la Ciudad", description:"Propone diseñar y edificar un Portal de Ingreso identitario en el acceso principal de la ciudad sobre la Ruta Provincial 38.", date:"01/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Plan Integral Pre-Lluvias", description:"Exige al Departamento Ejecutivo realizar de urgencia el mantenimiento preventivo, dragado y desmalezamiento de la red de canales pluviales antes del verano.", date:"17/11/2025"},
+      {id:"",title:"Proyecto de Ordenanza: Régimen de transparencia, fundamentación y protección del personal contratado municipal",description:"La necesidad de garantizar transparencia, razonabilidad y debido proceso administrativo en las decisiones vinculadas a la rescisión de contratos del personal municipal", date:"18/05/2026"},
+      {id:"",title:"Proyecto de resolución: Informe de Ejecución Presupuestaria y Estado Financiero Municipal", description:"Iniciativa para solicitar formalmente las cuentas bancarias, deudas de proveedores e ingresos percibidos de la actual gestión.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Limpieza y adecuación de alcantarillas en Barrio Jardín", description:"Reclama la limpieza urgente del canal pluvial de calle Tacuarí y la ampliación de la capacidad de alcantarillas en el cruce de la Ruta Nacional 38.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Estudios técnicos para red cloacal en Av. Lídoro J. Quinteros y calle Cabildo", description:"Solicita evaluar la factibilidad técnica y buscar financiamiento para construir la red de cloacas en un sector carente de saneamiento básico.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Solicitud de informe administrativo post-intervención", description:"Exige al Ejecutivo un informe detallado del estado financiero, patrimonial, deudas, personal y contratos vigentes heredados del periodo de intervención.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Acciones para planta de tratamiento de líquidos cloacales", description:"Sugerencia para gestionar ante la SAT y la Provincia la localización o expropiación de un terreno apto para instalar una planta de tratamiento de residuos cloacales.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Prórroga de sesiones ordinarias del Honorable Concejo Deliberante", description:"Propone prorrogar por 30 días las sesiones ordinarias del HCD ante la tardía asunción de concejales post-intervención.", date:"4/11/2025"},
+      {id:"",title:"Proyecto de resolución: Infraestructura hidráulica para prevenir anegamientos en Barrio Jardín", description:"Petición urgente para desobstruir el canal a cielo abierto e incrementar el tamaño de alcantarillas en el cruce de la Ruta Nacional 38.", date:"20/04/2026"},
+      {id:"",title:"Proyecto de comunicación: Solicitud de implementación de Boleta Única y reforma política", description:"Insta a la Legislatura provincial a tratar la reforma electoral para eliminar el régimen de acoples y aplicar la Boleta Única.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Exigencia de cumplimiento de la Ordenanza N.º 04/2025", description:"Sanción para intimar al Ejecutivo Municipal a que realice el enripiado, alumbrado y señalización obligatoria del camino rural Los Arroyos", date:"15/12/2025"},
+      {id:"",title:"Proyecto de ordenanza: Creación del Programa de Protección de Derechos Animales", description:"Propone regulaciones para campañas de castración segura con análisis de sangre previos obligatorios e instalación de comederos y bebederos públicos.", date:"15/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Diagnóstico sobre el servicio de agua potable", description:"Requiere una minuta de comunicación para exigir a la SAT un informe del estado operativo, de mantenimiento y de fallas en el suministro local", date:"17/11/2025"},
+      {id:"",title:"Proyecto de ordenanza: Preservación del carácter institucional y neutralidad del Estado", description:"Propone prohibir la rotulación o ploteo de maquinarias, vehículos y edificios públicos con nombres de políticos vigentes, ex intendentes o slogans partidarios.", date:"-"},
+      {id:"",title:"Proyecto de comunicación: Aplicación de la Ordenanza N.º 05/2012 de ruidos molestos", description:"Reclama al Ejecutivo Municipal que haga efectiva la prohibición y los controles sobre motocicletas que circulan con caños de escape libres o modificados.", date:"01/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Pedido de informe sobre obra de caminería en el Complejo Municipal", description:"Minuta que solicita detalles técnicos, plazos y costos de la caminería interna que interfiere con canchas de básquetbol y hockey.", date:"13/06/2026"},
+      {id:"",title:"Proyecto de resolución: Reconocimiento a la estudiante Eowlyn Montenegro", description:"Sanciona felicitaciones y pide evaluar colaboración presupuestaria para la estudiante local seleccionada por Space Kidz India para el diseño del satélite 'ShakthiSAT'.", date:"-"},  
+      
     ]
   },
   5: { // Ana Campos
@@ -386,18 +427,72 @@ Acompañamiento institucional a propuestas culturales, educativas, sociales y co
     ],
     formation: "Contador Público Nacional",
     projects: [
-      { id: "EXP-115-2026", title: "Habilitación Comercial Simplificada", description: "Proceso express digital para habilitar comercios minoristas de bajo riesgo en menos de 48 horas.", date: "05/04/2026", status: "Aprobado" },
-      { id: "EXP-199-2026", title: "Fomento al Empleo Joven", description: "Descuento del impuesto a los ingresos brutos locales para comercios que contraten menores de 25 años.", date: "01/06/2026", status: "En Comisión" }
+
     ]
   },
   7: { // Ramiro Aguilera
-    bio: "Ramiro Aguilera posee una sólida trayectoria en planeamiento de infraestructura urbana. Aboga por mejoras viales integrales, repavimentación y la ampliación de los servicios de agua potable y cloacas en la periferia de la ciudad.",
+    bio: `Ramiro Maximiliano Aguilera nació el 11 de septiembre de 1994 y es, ante todo, un hijo de Juan Bautista Alberdi, la ciudad que lo vio nacer, crecer, formarse y construir los vínculos y valores que hoy definen quién es.
+Es hijo de Eduardo Orlando Aguilera y Laura Estela Cortavitarte. Sus raíces familiares están profundamente ligadas a la comunidad. Entre ellas ocupa un lugar especial su abuela, María Esther Cortavitarte, reconocida enfermera de la ciudad, cuya vocación de servicio y compromiso con los demás forman parte de la historia familiar que lo acompaña.
+Su historia educativa comenzó en el Jardín de Infantes de la Escuela N.º 84 José María del Campo, conocida también como FEMP. Allí transitó sus primeros años y cursó parte de su educación primaria hasta quinto grado.
+Luego continuó sus estudios en la Escuela Normal Superior Florentino Ameghino, institución en la que completó su educación secundaria.
+Durante esa etapa no solo construyó su formación académica, sino también muchos de los vínculos, experiencias y aprendizajes que marcaron su vida. Uno de ellos fue haber sido abanderado durante su etapa secundaria, reconocimiento que recuerda con especial orgullo y que representó para él el valor del esfuerzo, la responsabilidad y la dedicación.
+Su formación continuó más allá de la escuela. Estudió inglés y completó la formación dictada en el Instituto de Inglés OUTSET, a cargo del profesor Sebastián Silva.
+En el ámbito universitario eligió el camino del Derecho. Es Procurador y actualmente se encuentra cursando sus últimas materias de la carrera de Abogacía, con el objetivo de completar próximamente su formación profesional y obtener el título de abogado.
+
+EL DEPORTE COMO ESCUELA DE VIDA
+
+Desde muy chico, Ramiro encontró en el deporte una manera de crecer, compartir y aprender.
+Su infancia estuvo especialmente vinculada al Club Los Amigos, donde desarrolló su pasión por el fútbol y compartió innumerables experiencias junto a otros chicos de la ciudad.
+También tuvo la oportunidad de formar parte del Club Juan Bautista Alberdi, participando en la disciplina de básquet. Esta experiencia le permitió conocer el valor de pertenecer a una institución, representar sus colores y compartir objetivos con un equipo.
+El deporte le enseñó valores que conserva hasta el día de hoy: el compañerismo, la disciplina, el esfuerzo, la perseverancia y, sobre todo, la importancia de entender que los objetivos se alcanzan trabajando junto a otros.
+LA FE Y EL COMPROMISO CON LOS DEMÁS
+
+Su vínculo con la Parroquia también ocupa un lugar importante en su historia.
+Desde joven tuvo una participación activa en distintas actividades de misión y formó parte del Movimiento de la Palabra de Dios. Actualmente continúa vinculado al trabajo comunitario como colaborador de Cáritas, espacio desde el cual acompaña y está cerca de quienes más necesitan de la comunidad.
+La solidaridad, el compromiso y la posibilidad de ayudar al otro son valores que considera fundamentales y que forman parte de su manera de entender la vida en comunidad.
+
+SU COMPROMISO POLÍTICO
+
+Su participación política comenzó muy temprano. A los 13 años se incorporó a la Juventud Radical, espacio político en el que milita desde entonces.
+A lo largo de estos años tuvo la posibilidad de asumir diferentes responsabilidades, entre ellas la de Presidente de la Juventud Radical, y de acompañar distintas listas y proyectos electorales.
+Su recorrido político se encuentra ligado a una visión de la política desde el espacio de la derecha, basada en convicciones y en la búsqueda de una sociedad donde el esfuerzo, el trabajo, la educación, la responsabilidad y la libertad tengan un lugar central.
+Para Ramiro, la política no debe ser solamente una actividad electoral. Es, fundamentalmente, una herramienta para transformar la realidad y para involucrarse en los problemas concretos de la gente.
+
+SU SUEÑO PARA ALBERDI
+
+Todo lo que ha vivido —su familia, su educación, su formación profesional, el deporte, la parroquia, las instituciones y la política— tiene un punto en común: Juan Bautista Alberdi.
+Esta es la ciudad donde nació, donde creció y donde están sus afectos. Por eso, uno de sus mayores sueños y objetivos es poder transformar la realidad de su ciudad y contribuir a construir el Alberdi que sus vecinos merecen.
+Sueña con una ciudad donde cada barrio tenga los servicios básicos que necesita, donde exista planificación, organización y oportunidades para todos.
+Sueña con un Alberdi organizado, pujante y en desarrollo, que pueda crecer sin perder sus raíces y que encuentre en sus propios vecinos la fuerza para salir adelante.
+Cree profundamente que las transformaciones no se hacen de un día para el otro ni dependen de una sola persona. Se construyen con trabajo, compromiso, perseverancia y, fundamentalmente, con una comunidad que decide involucrarse.
+Su historia todavía se sigue escribiendo.
+Y quiere que las próximas páginas tengan como protagonista a la ciudad que lo vio nacer, crecer y soñar: Juan Bautista Alberdi.`,
     commissions: [
       "Presupuesto y Hacienda",
       "Relaciones Laborales, Política Ocupacional, Seguridad e Higiene en el Trabajo",
       "Legislación y Peticiones"
     ],
+    formation: "Procurador",
     projects: [
+      {id:"",title:"Proyecto de ordenanza: Creación del Comité de Emergencia", description:"Propone crear un Comité de Emergencia Municipal coordinado ante crisis climáticas, sanitarias y de seguridad pública.", date:"16/03/2026"},
+      {id:"",title:"Proyecto de ordenanza: Creación del Portal de Ingreso a la Ciudad", description:"Propone diseñar y edificar un Portal de Ingreso identitario en el acceso principal de la ciudad sobre la Ruta Provincial 38.", date:"01/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Plan Integral Pre-Lluvias", description:"Exige al Departamento Ejecutivo realizar de urgencia el mantenimiento preventivo, dragado y desmalezamiento de la red de canales pluviales antes del verano.", date:"17/11/2025"},
+      {id:"",title:"Proyecto de Ordenanza: Régimen de transparencia, fundamentación y protección del personal contratado municipal",description:"La necesidad de garantizar transparencia, razonabilidad y debido proceso administrativo en las decisiones vinculadas a la rescisión de contratos del personal municipal", date:"18/05/2026"},
+      {id:"",title:"Proyecto de resolución: Informe de Ejecución Presupuestaria y Estado Financiero Municipal", description:"Iniciativa para solicitar formalmente las cuentas bancarias, deudas de proveedores e ingresos percibidos de la actual gestión.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Limpieza y adecuación de alcantarillas en Barrio Jardín", description:"Reclama la limpieza urgente del canal pluvial de calle Tacuarí y la ampliación de la capacidad de alcantarillas en el cruce de la Ruta Nacional 38.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Estudios técnicos para red cloacal en Av. Lídoro J. Quinteros y calle Cabildo", description:"Solicita evaluar la factibilidad técnica y buscar financiamiento para construir la red de cloacas en un sector carente de saneamiento básico.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Solicitud de informe administrativo post-intervención", description:"Exige al Ejecutivo un informe detallado del estado financiero, patrimonial, deudas, personal y contratos vigentes heredados del periodo de intervención.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Acciones para planta de tratamiento de líquidos cloacales", description:"Sugerencia para gestionar ante la SAT y la Provincia la localización o expropiación de un terreno apto para instalar una planta de tratamiento de residuos cloacales.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Prórroga de sesiones ordinarias del Honorable Concejo Deliberante", description:"Propone prorrogar por 30 días las sesiones ordinarias del HCD ante la tardía asunción de concejales post-intervención.", date:"4/11/2025"},
+      {id:"",title:"Proyecto de resolución: Infraestructura hidráulica para prevenir anegamientos en Barrio Jardín", description:"Petición urgente para desobstruir el canal a cielo abierto e incrementar el tamaño de alcantarillas en el cruce de la Ruta Nacional 38.", date:"20/04/2026"},
+      {id:"",title:"Proyecto de comunicación: Solicitud de implementación de Boleta Única y reforma política", description:"Insta a la Legislatura provincial a tratar la reforma electoral para eliminar el régimen de acoples y aplicar la Boleta Única.", date:"-"},
+      {id:"",title:"Proyecto de resolución: Exigencia de cumplimiento de la Ordenanza N.º 04/2025", description:"Sanción para intimar al Ejecutivo Municipal a que realice el enripiado, alumbrado y señalización obligatoria del camino rural Los Arroyos", date:"15/12/2025"},
+      {id:"",title:"Proyecto de ordenanza: Creación del Programa de Protección de Derechos Animales", description:"Propone regulaciones para campañas de castración segura con análisis de sangre previos obligatorios e instalación de comederos y bebederos públicos.", date:"15/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Diagnóstico sobre el servicio de agua potable", description:"Requiere una minuta de comunicación para exigir a la SAT un informe del estado operativo, de mantenimiento y de fallas en el suministro local", date:"17/11/2025"},
+      {id:"",title:"Proyecto de ordenanza: Preservación del carácter institucional y neutralidad del Estado", description:"Propone prohibir la rotulación o ploteo de maquinarias, vehículos y edificios públicos con nombres de políticos vigentes, ex intendentes o slogans partidarios.", date:"-"},
+      {id:"",title:"Proyecto de comunicación: Aplicación de la Ordenanza N.º 05/2012 de ruidos molestos", description:"Reclama al Ejecutivo Municipal que haga efectiva la prohibición y los controles sobre motocicletas que circulan con caños de escape libres o modificados.", date:"01/12/2025"},
+      {id:"",title:"Proyecto de comunicación: Pedido de informe sobre obra de caminería en el Complejo Municipal", description:"Minuta que solicita detalles técnicos, plazos y costos de la caminería interna que interfiere con canchas de básquetbol y hockey.", date:"13/06/2026"},
+      {id:"",title:"Proyecto de resolución: Reconocimiento a la estudiante Eowlyn Montenegro", description:"Sanciona felicitaciones y pide evaluar colaboración presupuestaria para la estudiante local seleccionada por Space Kidz India para el diseño del satélite 'ShakthiSAT'.", date:"-"},  
       
     ]
   },
@@ -643,10 +738,8 @@ JUAN BAUTISTA ALBERDI`,
     ],
     projects: [
       {id: "", title: "Proyecto de Resolución: Solicitud de informe sobre la gestión municipal dureante el periodo de intervención.", description: "Solicitamos un informe completo, detallado y actualizado sobre la situación administrativa, financiera, contable, patrimonial y operativa del Municipio al finalizar la intervención. Esta información es fundamental para garantizar la transparencia, ejercer el control legislativo y planificar adecuadamente la gestión municipal en beneficio de todos los vecinos.", date: "17/11/2025"},
-      {id: "", title: "Proyecto de Resolución: Revalorización de plazas y espacios verdes en los barrios de Juan Bautista Alberdi y zonas aledañas", description: "Impulsamos un plan de revalorización y embellecimiento gradual de plazas y espacios verdes en todos los barrios de Juan Bautista Alberdi y zonas aledañas. El proyecto propone mejorar el mantenimiento, limpieza, señalización y recuperación de estos espacios, promoviendo la recreación, el encuentro comunitario y una mejor calidad de vida, utilizando recursos municipales de forma eficiente y sostenida.", date: "28/11/2025"},
       {id: "", title: "Proyecto de Resolución: Creación de una plaza pública en Marapa.", description: "Impulsamos la creación de un espacio verde y comunitario en la localidad de Marapa, respondiendo a un pedido histórico de sus vecinos. Este proyecto busca fortalecer el encuentro social, fomentar la recreación, mejorar la calidad de vida y avanzar en la planificación de un lugar seguro y accesible para familias, niños y jóvenes.", date: "18/11/2025"},
       {id: "", title: "Proyecto de Resolución: Uniforme institucional para empleados del Concejo Deliberante", description: "Impulsamos la implementación del uniforme institucional para el personal del Honorable Concejo Deliberante, con el objetivo de fortalecer la imagen institucional, mejorar la identificación del personal y garantizar condiciones laborales más equitativas. La medida busca brindar una presentación ordenada y profesional, evitando que los trabajadores deban afrontar gastos personales, promoviendo igualdad, comodidad y dignidad en el ámbito laboral.", date: "28/11/2025"},
-      {id: "", title: "Proyecto de Resolución: Incorporación de Bomberos a la estructura de Defensa Civil.", description: "Reconocemos la labor y el compromiso de nuestros Bomberos Voluntarios, quienes actúan día a día con entrega, profesionalismo y vocación de servicio. El proyecto propone su incorporación a la estructura de Defensa Civil Municipal, mediante contratos o cargos permanentes, según la necesidad de servicio. Una medida que valora su formación, fortalece la seguridad y mejora la capacidad de respuesta ante emergencias en nuestra ciudad.", date: "28/11/2025"},
       {id: "", title:"Proyecto de Resolución: Cargos por concurso público para los cargos de Secretario/a, Prosecretario/a y Tesorero/a del Concejo Deliberante de Juan Bautista Alberd", description: "Convocamos a concurso público abierto exclusivo para personas domiciliadas en Alberdi. Proceso transparente, imparcial y objetivo, garantizando igualdad de oportunidades. Un jurado evaluador independiente, conformado por instituciones locales.", date: "18/12/2025"},
       {id: "", title:"Proyecto de Resolución: Mejoramiento y acondicionamiento prioritario de la pileta del Complejo Municipal de Juan Bautista Alberdi", description: "Impulsamos el mejoramiento integral de la pileta del Complejo Municipal de Juan Bautista Alberdi, priorizando condiciones de seguridad, higiene y confort para vecinos, familias y deportistas. El proyecto contempla la incorporación de sombra, reparación de duchas y espacios de higiene, instalación de bancos, mejora del entorno y acondicionamiento general, garantizando un espacio adecuado para la recreación, el deporte y el desarrollo de actividades durante la temporada de verano.", date: "18/11/2025"},
       {id: "", title:"Proyecto de Ordenanza: Creación del programa de incentivo a la buena imagen comercial", description: "Promovemos comercios más ordenados, limpios y atractivos, que fortalecen nuestra ciudad y mejoran la experiencia de todos. Un programa de beneficios tributarios para los comercios que mantengan en buen estado.", date: "-"},
@@ -655,10 +748,8 @@ JUAN BAUTISTA ALBERDI`,
       {id: "", title:"Proyecto de Ordenanza: Tenencia responsable y defensor de los derechos de los animales", description:"Promovemos el cuidado responsable de los animales, fortaleciendo políticas públicas que previenen el maltrato y mejoran la convivencia en nuestra ciudad.", date:"-"},
       {id: "", title:"Proyecto de Resolución: Informe sobre obras públicas y programas municipales", description:"Solicitamos información sobre el estado de ejecución de obras y programas municipales para garantizar transparencia y seguimiento de la gestión.", date:"-"},
       {id: "", title:"Proyecto de Resolución: Informe sobre programas de vivienda en Alberdi", description:"Solicitamos información clara sobre los programas habitacionales en la ciudad para fortalecer las políticas de acceso a la vivienda.", date:"-"},
-      {id: "", title:"Proyecto de Resolución: Informe sobre el estado de canales y desagües", description:"Solicitamos información sobre el estado del sistema de drenaje en la ciudad para prevenir inundaciones y garantizar su correcto funcionamiento.", date:"-"},
       {id: "", title:"Proyecto de Ordenanza: Puesta en valor y mejoramiento del Cementerio Municipal", description:"Buscamos mejorar las condiciones del cementerio para brindar un espacio digno, accesible y en mejores condiciones para todos los vecinos.", date:"-"},
       {id: "", title:"Proyecto de Ordenanza: Prevención de inundaciones y cuidado del sistema de drenaje", description:"Impulsamos la creación de un programa municipal para prevenir inundaciones y promover el cuidado de desagües y canales en la ciudad.", date:"-"},
-      {id: "", title:"Proyecto de Resolución: Solicitud de respuesta", description:"Solicitamos al Departamento Ejecutivo Municipal que brinde respuesta a los pedidos de informes pendientes, garantizando transparencia y acceso a la información pública.", date:"-"},
       {id: "", title:"Proyecto de Ordenanza: Consejo Consultivo de Prevención y Salud Mental Comunitaria", description:"Impulsamos la creación de un espacio permanente de trabajo conjunto para prevenir el consumo problemático y fortalecer la salud mental en nuestra comunidad. Luego del intercambio en el recinto y escuchando las opiniones de todos los bloques y vecinos, se decidió transformar el proyecto en un CONSEJO CONSULTIVO PERMANENTE, garantizando un trabajo sostenido y articulado durante todo el año.", date:"-"},
       {id:"21", title:"Proyecto de Resolución: Verificación Técnica Vehicular (VTV) para Juan Bautista Alberdi", description:"Impulsamos la implementación de operativos de VTV en la ciudad para mejorar la seguridad vial y facilitar el acceso de todos los vecinos.", date:"-"},
       {id:"26", title:"Proyecto de Resolución: Solicitud de ejecución presupuestaria 2026", description:"Promovemos la transparencia, el control de los recursos públicos y el acceso a la información para que los vecinos conozcan cómo se administran los fondos municipales.", date:"12/06/2026"},
@@ -672,7 +763,6 @@ JUAN BAUTISTA ALBERDI`,
       {id:"34", title:"Proyecto de Resolución: Solicitud de informe sobre el estado, situación y cumplimiento del destino de los terrenos donados mediante Ordenanza Municipal N.º 12/2019", description:"Solicitamos al Departamento Ejecutivo Municipal que informe sobre el estado actual, la situación dominial, catastral, administrativa y material de los terrenos donados mediante Ordenanza Municipal N.º 12/2019, destinados exclusivamente a la construcción de una escuela pública y una plaza pública.", date:"12/06/2026"},
       {id:"35", title:"Proyecto de Resolución: Impulso para la creación y puesta en valor de la Plaza Recreativa y Comunitaria del Bajo Marapa", description:"Una plaza para el Bajo Marapa, un lugar para crecer, compartir y disfrutar en comunidad.", date:"-"},
       {id:"36", title:"Proyecto de Resolución: Grupo Alberdiano de Escritores", description:"Gracias por enriquecer la identidad y la historia de nuestra ciudad. El reconocimiento público se realizará en el marco de los actos y actividades oficiales organizados por la Municipalidad con motivo de los festejos del 29 de agosto de 2026, fecha del natalicio de Juan Bautista Alberdi. Se contempla la entrega de un diploma de reconocimiento institucional al Grupo Alberdiano de Escritores.", date:"-"},
-      {id:"37", title:"Proyecto de Ordenanza: Programa Municipal de Sendas Peatonales Accesibles e Inclusivas mediante pictogramas de orientación y seguridad vial", description:"Una ciudad más accesible, inclusiva y segura para todas las personas. Promovemos políticas públicas que garantizan una ciudad accesible, inclusiva y segura.", date:"-"}
 
     ]
   },
