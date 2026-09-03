@@ -736,6 +736,7 @@ JUAN BAUTISTA ALBERDI`,
       "Preservación del Patrimonio de la Ciudad",
       "Políticas de Género, Mujeres y Diversidad"
     ],
+    formation: ["Profesora del III Ciclo de EGB ","Educación Polimodal en Tecnología", "Profesora de Danzas Folclóricas"," Acompañante Terapéutico"],
     projects: [
       {id: "", title: "Proyecto de Resolución: Solicitud de informe sobre la gestión municipal dureante el periodo de intervención.", description: "Solicitamos un informe completo, detallado y actualizado sobre la situación administrativa, financiera, contable, patrimonial y operativa del Municipio al finalizar la intervención. Esta información es fundamental para garantizar la transparencia, ejercer el control legislativo y planificar adecuadamente la gestión municipal en beneficio de todos los vecinos.", date: "17/11/2025"},
       {id: "", title: "Proyecto de Resolución: Creación de una plaza pública en Marapa.", description: "Impulsamos la creación de un espacio verde y comunitario en la localidad de Marapa, respondiendo a un pedido histórico de sus vecinos. Este proyecto busca fortalecer el encuentro social, fomentar la recreación, mejorar la calidad de vida y avanzar en la planificación de un lugar seguro y accesible para familias, niños y jóvenes.", date: "18/11/2025"},
